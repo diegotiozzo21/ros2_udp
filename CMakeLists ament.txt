@@ -17,12 +17,13 @@ find_package(geometry_msgs REQUIRED)
 
 add_executable(udp_server src/udp_server.cpp)
 ament_target_dependencies(udp_server rclcpp std_msgs geometry_msgs)
-add_executable(udp_client src/udp_client.cpp)
-ament_target_dependencies(udp_client rclcpp std_msgs)
+
+#add_executable(udp_client src/udp_client.cpp)
+#ament_target_dependencies(udp_client rclcpp std_msgs)
 
 install(TARGETS
   udp_server
-  udp_client 
+  #udp_client 
   DESTINATION lib/${PROJECT_NAME})
 
 ament_package()
